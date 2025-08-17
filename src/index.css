@@ -1,0 +1,278 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Luxury Fragrance E-commerce Design System
+All colors MUST be HSL for consistency.
+Inspired by premium fragrance brands with elegant, sophisticated aesthetics.
+*/
+
+@layer base {
+  :root {
+    /* Base Colors - Elegant and sophisticated */
+    --background: 0 0% 99%;
+    --foreground: 240 10% 15%;
+
+    /* Card and Surface Colors */
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 15%;
+
+    /* Primary - Deep luxury purple */
+    --primary: 260 20% 25%;
+    --primary-foreground: 0 0% 98%;
+    --primary-glow: 260 30% 35%;
+
+    /* Secondary - Warm gold accent */
+    --secondary: 45 95% 85%;
+    --secondary-foreground: 240 10% 15%;
+
+    /* Muted tones */
+    --muted: 240 5% 96%;
+    --muted-foreground: 240 5% 45%;
+
+    /* Accent - Luxury gold */
+    --accent: 45 100% 70%;
+    --accent-foreground: 240 10% 15%;
+
+    /* Semantic colors */
+    --destructive: 0 75% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 98%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 240 10% 15%;
+
+    /* Border and input */
+    --border: 240 5% 90%;
+    --input: 240 5% 92%;
+    --ring: 260 20% 25%;
+
+    --radius: 0.5rem;
+
+    /* Luxury gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-gold: linear-gradient(135deg, hsl(var(--accent)), hsl(45 85% 60%));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-glow)) 50%, hsl(var(--accent)) 100%);
+    
+    /* Shadows - luxury depth */
+    --shadow-luxury: 0 10px 40px -10px hsl(var(--primary) / 0.3);
+    --shadow-gold: 0 8px 30px -8px hsl(var(--accent) / 0.4);
+    --shadow-card: 0 4px 20px -4px hsl(240 10% 15% / 0.1);
+    
+    /* Animation and transitions */
+    --transition-luxury: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.3s ease-out;
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark mode - elegant night theme */
+    --background: 240 10% 8%;
+    --foreground: 0 0% 95%;
+
+    --card: 240 10% 12%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 240 10% 12%;
+    --popover-foreground: 0 0% 95%;
+
+    /* Primary stays elegant in dark mode */
+    --primary: 260 40% 60%;
+    --primary-foreground: 240 10% 8%;
+    --primary-glow: 260 50% 70%;
+
+    /* Secondary - muted gold for dark mode */
+    --secondary: 240 10% 18%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 240 10% 15%;
+    --muted-foreground: 240 5% 65%;
+
+    /* Accent - refined gold for dark mode */
+    --accent: 45 85% 65%;
+    --accent-foreground: 240 10% 8%;
+
+    /* Semantic colors for dark mode */
+    --destructive: 0 75% 65%;
+    --destructive-foreground: 0 0% 95%;
+
+    --success: 142 70% 45%;
+    --success-foreground: 0 0% 95%;
+
+    --warning: 38 85% 60%;
+    --warning-foreground: 240 10% 8%;
+
+    --border: 240 10% 20%;
+    --input: 240 10% 18%;
+    --ring: 260 40% 60%;
+    
+    /* Dark mode gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-gold: linear-gradient(135deg, hsl(var(--accent)), hsl(45 75% 55%));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-glow)) 50%, hsl(var(--accent)) 100%);
+    
+    /* Dark mode shadows */
+    --shadow-luxury: 0 10px 40px -10px hsl(0 0% 0% / 0.5);
+    --shadow-gold: 0 8px 30px -8px hsl(var(--accent) / 0.3);
+    --shadow-card: 0 4px 20px -4px hsl(0 0% 0% / 0.3);
+
+    /* Sidebar dark mode */
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+@layer components {
+  /* Luxury Button Variants */
+  .btn-luxury {
+    @apply bg-gradient-to-r from-primary to-primary-glow text-primary-foreground px-8 py-3 rounded-md font-semibold shadow-luxury hover:shadow-gold transition-all duration-300 hover:scale-105;
+  }
+  
+  .btn-gold {
+    @apply bg-gradient-to-r from-accent to-accent/80 text-accent-foreground px-6 py-2 rounded-md font-medium shadow-gold hover:shadow-luxury transition-all duration-300;
+  }
+
+  /* Product Card Hover Effects */
+  .product-card {
+    @apply bg-card rounded-lg shadow-card border border-border overflow-hidden transition-all duration-300 hover:shadow-luxury hover:-translate-y-2;
+  }
+
+  /* Luxury Input Styling */
+  .input-luxury {
+    @apply bg-background border-border rounded-md px-4 py-3 focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200;
+  }
+
+  /* Text Shimmer Effect */
+  .text-shimmer {
+    @apply bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_100%] bg-clip-text text-transparent animate-shimmer;
+  }
+}
+
+@layer utilities {
+  .animate-shimmer {
+    animation: shimmer 2s linear infinite;
+  }
+  
+  @keyframes shimmer {
+    0% {
+      background-position: -200% center;
+    }
+    100% {
+      background-position: 200% center;
+    }
+  }
+
+  /* Scroll Animations */
+  .animate-fade-up-out {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  .animate-fade-up-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .animate-slide-left-out {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  .animate-slide-left-in {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .animate-slide-right-out {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  .animate-slide-right-in {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .animate-scale-up-out {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  .animate-scale-up-in {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.6s ease-out forwards;
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-slide-up {
+    animation: slide-up 0.5s ease-out forwards;
+  }
+
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Staggered animations for grid items */
+  .animate-stagger-1 { animation-delay: 0.1s; }
+  .animate-stagger-2 { animation-delay: 0.2s; }
+  .animate-stagger-3 { animation-delay: 0.3s; }
+  .animate-stagger-4 { animation-delay: 0.4s; }
+  .animate-stagger-5 { animation-delay: 0.5s; }
+  .animate-stagger-6 { animation-delay: 0.6s; }
+}
