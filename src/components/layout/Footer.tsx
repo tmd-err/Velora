@@ -16,7 +16,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-foreground">Luxe Parfum</h3>
+            <h3 className="text-lg font-semibold text-foreground">Velora's Parfum</h3>
             <p className="text-muted-foreground text-sm">
               Discover the world's finest fragrances. From timeless classics to modern masterpieces, 
               we curate only the most exquisite scents for discerning individuals.
@@ -101,15 +101,15 @@ export function Footer() {
             <div className="pt-4 space-y-2">
               <div className="flex items-center space-x-2 text-muted-foreground text-sm">
                 <Phone className="h-4 w-4" />
-                <span>+1 (555) 123-4567</span>
+                <span>+2126 815 33 815</span>
               </div>
               <div className="flex items-center space-x-2 text-muted-foreground text-sm">
                 <Mail className="h-4 w-4" />
-                <span>hello@luxeparfum.com</span>
+                <span>yahyatamda444@gmail.com</span>
               </div>
               <div className="flex items-center space-x-2 text-muted-foreground text-sm">
                 <MapPin className="h-4 w-4" />
-                <span>New York, NY</span>
+                <span>Rabat , Morocco</span>
               </div>
             </div>
           </div>
@@ -140,7 +140,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-border mt-8 pt-8 flex flex-col sm:flex-row justify-between items-center">
           <p className="text-muted-foreground text-sm">
-            © 2024 Luxe Parfum. All rights reserved.
+            © 2025 Velora. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 sm:mt-0">
             <Link to="/privacy" className="text-muted-foreground hover:text-primary text-sm transition-colors">
